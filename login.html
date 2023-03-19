@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Login</title>
+
+    <style>
+        h1{
+            margin-left: 270px;
+            margin-top: 60px;
+        }
+        #email{
+            margin-left: 300px;
+            margin-bottom: 5px;
+        }
+        #senha{
+            margin-left: 300px;
+            margin-bottom: 5px;
+
+        }
+        #enviar{
+            margin-left: 300px;
+            padding-left: 66px;
+            padding-right: 62px;
+            text-align: center;
+            background-image: linear-gradient( rgb(43, 255, 0), rgb(18, 114, 34));;
+            border: rgb(0, 255, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça o login aqui</h1>
+    <input type="text" name="" id="email" placeholder="digite seu email"> <br>
+    <input type="password" name="" id="senha" placeholder="digite sua senha"> <br>
+    <input type="submit" value="Enviar" id="enviar" onclick="verifica()" onmouseover="cor()">
+
+
+
+
+
+    <script>
+        function verifica(){
+            var email = document.getElementById('email').value
+            var senha = document.getElementById('senha').value
+
+            if (
+                email == 'ratao' && senha == 'mzv' ||
+                email == 'ra' && senha == 'mzv'||
+                email == 'rat' && senha == 'mzv'||
+                email == 'rata' && senha == 'mzv'
+            
+            
+            ){
+                alert('bem vindo')
+                document.getElementById("email").style.backgroundColor = "rgb(0, 255, 0)";
+                document.getElementById("senha").style.backgroundColor = "rgb(0, 255, 0)";
+
+            }else{
+                alert('email ou senha incorretos')
+                document.getElementById("email").style.backgroundColor = "red";
+                document.getElementById("senha").style.backgroundColor = "red";
+                document.getElementById('aqui').innerHTML = Date()
+
+            }
+
+        }
+
+        function cor(){
+            document.getElementById('cor').style.backgroundColor = 'red'
+
+        }
+
+    </script>
+</body>
+</html>
